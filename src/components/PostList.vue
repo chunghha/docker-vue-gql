@@ -15,7 +15,7 @@
 
             <v-list-tile-action>
               <v-btn icon ripple>
-                <v-icon color="primary">favorite</v-icon>
+                <v-icon color="accent">favorite</v-icon>
               </v-btn>
             </v-list-tile-action>
           </v-list-tile>

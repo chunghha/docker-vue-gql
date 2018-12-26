@@ -3,22 +3,26 @@
     <v-flex xs12>
       <v-card>
         <v-list two-line>
-          <v-list-tile v-for="user in allUsers" :key="user.id" avatar>
-            <v-list-tile-avatar>
-              <img :src="user.avatar">
-            </v-list-tile-avatar>
+          <template v-for="(user, index) in allUsers">
+            <v-divider v-if="index > 0" :key="index"></v-divider>
 
-            <v-list-tile-content>
-              <v-list-tile-title v-text="user.firstName + ' ' + user.lastName"></v-list-tile-title>
-              <v-list-tile-sub-title v-text="user.email"></v-list-tile-sub-title>
-            </v-list-tile-content>
+            <v-list-tile :key="user.id" avatar>
+              <v-list-tile-avatar>
+                <img :src="user.avatar">
+              </v-list-tile-avatar>
 
-            <v-list-tile-action>
-              <v-btn icon ripple>
-                <v-icon color="accent">info</v-icon>
-              </v-btn>
-            </v-list-tile-action>
-          </v-list-tile>
+              <v-list-tile-content>
+                <v-list-tile-title v-text="user.firstName + ' ' + user.lastName"></v-list-tile-title>
+                <v-list-tile-sub-title v-text="user.email"></v-list-tile-sub-title>
+              </v-list-tile-content>
+
+              <v-list-tile-action>
+                <v-btn icon ripple>
+                  <v-icon color="primary">info</v-icon>
+                </v-btn>
+              </v-list-tile-action>
+            </v-list-tile>
+          </template>
         </v-list>
       </v-card>
     </v-flex>

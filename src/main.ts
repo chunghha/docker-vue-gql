@@ -10,6 +10,10 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import './registerServiceWorker';
+import './assets/styles/main.styl';
+
+import 'material-icons';
+import 'typeface-ibm-plex-sans';
 
 Vue.config.productionTip = false;
 
