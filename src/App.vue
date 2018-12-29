@@ -17,18 +17,14 @@
   </v-app>
 </template>
 
-<script>
-export default {
-  name: 'App',
-  data() {
-    return {
-      //
-    };
-  }
-};
+<script lang='ts'>
+import { Component, Vue } from 'vue-class-decorator';
+
+@Component
+export default class App extends Vue {}
 </script>
 
-<style lang="scss">
+<style lang='scss'>
 .app-logo {
   height: 56px;
   padding: 8px 0 0 0;

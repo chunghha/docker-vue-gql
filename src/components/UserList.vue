@@ -30,19 +30,19 @@
 </template>
 
 <script lang="ts">
+import { Component, Vue } from 'vue-class-decorator';
+
 import { ALL_USERS_QUERY } from '../graphql';
 
-export default {
-  data() {
-    return {
-      allUsers: []
-    };
-  },
+@Component({
   apollo: {
     // fetch all users
     allUsers: {
       query: ALL_USERS_QUERY
     }
   }
-};
+})
+export default class UserList extends Vue {
+  allUsers = [];
+}
 </script>

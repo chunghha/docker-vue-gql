@@ -26,19 +26,19 @@
 </template>
 
 <script lang="ts">
+import { Component, Vue } from 'vue-class-decorator';
+
 import { ALL_POSTS_QUERY } from '../graphql';
 
-export default {
-  data() {
-    return {
-      allPosts: []
-    };
-  },
+@Component({
   apollo: {
-    // fetch all users
+    // fetch all posts
     allPosts: {
       query: ALL_POSTS_QUERY
     }
   }
-};
+})
+export default class PostList extends Vue {
+  allPosts = [];
+}
 </script>
